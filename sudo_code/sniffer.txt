@@ -1,0 +1,36 @@
+void Sniff()
+{
+    CapturedPacket capture = pyshark.LiveCapture(default interface)
+    for packet in capture.sniff_continuously()
+    {
+
+        if (hasattr(packet, "ip"))
+        {
+            // on this line we check if packet belong to this PC, if we want to use system for whole PCs on the current network we can remove this  condition.
+            if (IsPacketMine(packet.ip))
+            {
+                flowDirection, otherIp = IsPacketMine(packet.ip)
+                if (IsForbiddenIps(otherIp)) // is the ip of other computer which this pc is connected to, blacklisted?
+                    AddDetected(blacklisted ip address) // add treat to detected list
+
+                string payload = GetPayload(packet)
+                if payload !== None
+                {
+                    bool blackword = HasForbiddenWord(payload) //checks for forbidden word in tcp/udp packet payload (info block)
+                    if (blackword)
+                        AddDetected(payload contain forbidden words)
+                }
+
+                int predictedType = 0
+                // 0: normal, 1: anormal
+                if (inModel.predict(packet length) == "cryptojacking")
+                    predictedType = 1
+
+                int condition = ipDictionary.SetProbability(otherIp, predictedType)
+
+                if (condition > (maxCount/2))
+                    AddDetected(suspicious packet size detected with probability of(condition*100)/maxCount))
+            }
+        }
+    }
+}

@@ -1,0 +1,62 @@
+=== Run information ===
+
+Scheme:       weka.classifiers.trees.RandomForest -P 100 -I 100 -num-slots 1 -K 0 -M 1.0 -V 0.001 -S 1
+Relation:     output-inflow
+Instances:    316746
+Attributes:   2
+              name
+              size
+Test mode:    split 66.0% train, remainder test
+
+=== Classifier model (full training set) ===
+
+RandomForest
+
+Bagging with 100 iterations and base learner
+
+weka.classifiers.trees.RandomTree -K 0 -M 1.0 -V 0.001 -S 1 -do-not-check-capabilities
+
+Time taken to build model: 44.6 seconds
+
+=== Evaluation on test split ===
+
+Time taken to test model on test split: 3.15 seconds
+
+=== Summary ===
+
+Correctly Classified Instances       85957               79.816  %
+Incorrectly Classified Instances     21737               20.184  %
+Kappa statistic                          0.7397
+Mean absolute error                      0.0638
+Root mean squared error                  0.1794
+Relative absolute error                 36.7031 %
+Root relative squared error             60.8396 %
+Total Number of Instances           107694     
+
+=== Detailed Accuracy By Class ===
+
+                 TP Rate  FP Rate  Precision  Recall   F-Measure  MCC      ROC Area  PRC Area  Class
+                 0.978    0.022    0.954      0.978    0.966      0.949    0.996     0.990     skype_ingoing_novpn
+                 0.421    0.020    0.835      0.421    0.560      0.535    0.883     0.617     office_ingoing_novpn
+                 0.647    0.004    0.962      0.647    0.774      0.768    0.970     0.838     bitcoin_full_ingoing_novpn
+                 0.218    0.001    0.754      0.218    0.338      0.401    0.879     0.316     bytecoin_full_ingoing_novpn
+                 0.982    0.141    0.662      0.982    0.791      0.743    0.926     0.661     youtube_ingoing_novpn
+                 0.871    0.064    0.642      0.871    0.739      0.710    0.948     0.684     monero_full_ingoing_novpn
+                 0.487    0.000    0.989      0.487    0.653      0.694    0.994     0.591     monero_mining_ingoing_novpn
+                 0.313    0.000    0.963      0.313    0.473      0.548    0.974     0.448     bitcoin_mining_ingoing_novpn
+                 0.102    0.000    0.636      0.102    0.175      0.253    0.975     0.227     bytecoin_mining_ingoing_novpn
+Weighted Avg.    0.798    0.050    0.828      0.798    0.783      0.760    0.948     0.774     
+
+=== Confusion Matrix ===
+
+     a     b     c     d     e     f     g     h     i   <-- classified as
+ 33981   717    12     6    16    31     0     0     0 |     a = skype_ingoing_novpn
+   481  8653   220    55 10087  1036     0     7     1 |     b = office_ingoing_novpn
+   238   418  8417    26   107  3768     0     1    31 |     c = bitcoin_full_ingoing_novpn
+    69   144    43   346   177   809     2     0     0 |     d = bytecoin_full_ingoing_novpn
+    30   336    18     2 23193    40     0     1     0 |     e = youtube_ingoing_novpn
+    16    88    41    24  1437 10891     0     0     0 |     f = monero_full_ingoing_novpn
+   193     0     0     0     0     5   188     0     0 |     g = monero_mining_ingoing_novpn
+   243     4     0     0     0   262     0   232     0 |     h = bitcoin_mining_ingoing_novpn
+   370     0     0     0     0   125     0     0    56 |     i = bytecoin_mining_ingoing_novpn
+

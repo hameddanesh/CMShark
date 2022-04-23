@@ -1,0 +1,48 @@
+=== Run information ===
+
+Scheme:       weka.classifiers.trees.RandomForest -P 100 -I 100 -num-slots 1 -K 0 -M 1.0 -V 0.001 -S 1
+Relation:     netflow-dataset-out
+Instances:    319001
+Attributes:   2
+              size
+              type
+Test mode:    split 66.0% train, remainder test
+
+=== Classifier model (full training set) ===
+
+RandomForest
+
+Bagging with 100 iterations and base learner
+
+weka.classifiers.trees.RandomTree -K 0 -M 1.0 -V 0.001 -S 1 -do-not-check-capabilities
+
+Time taken to build model: 43.6 seconds
+
+=== Evaluation on test split ===
+
+Time taken to test model on test split: 2.17 seconds
+
+=== Summary ===
+
+Correctly Classified Instances      101935               93.984  %
+Incorrectly Classified Instances      6525                6.016  %
+Kappa statistic                          0.8   
+Mean absolute error                      0.0751
+Root mean squared error                  0.1959
+Relative absolute error                 27.7775 %
+Root relative squared error             53.1618 %
+Total Number of Instances           108460     
+
+=== Detailed Accuracy By Class ===
+
+                 TP Rate  FP Rate  Precision  Recall   F-Measure  MCC      ROC Area  PRC Area  Class
+                 0.938    0.052    0.989      0.938    0.963      0.808    0.979     0.994     bengin
+                 0.948    0.062    0.748      0.948    0.836      0.808    0.979     0.867     cryptojacking
+Weighted Avg.    0.940    0.054    0.950      0.940    0.943      0.808    0.979     0.973     
+
+=== Confusion Matrix ===
+
+     a     b   <-- classified as
+ 85278  5605 |     a = bengin
+   920 16657 |     b = cryptojacking
+

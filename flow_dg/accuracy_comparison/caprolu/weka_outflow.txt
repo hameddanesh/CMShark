@@ -1,0 +1,98 @@
+=== Run information ===
+
+Scheme:       weka.classifiers.trees.RandomForest -P 100 -I 100 -num-slots 1 -K 0 -M 1.0 -V 0.001 -S 1
+Relation:     output-outflow
+Instances:    897622
+Attributes:   2
+              name
+              size
+Test mode:    split 66.0% train, remainder test
+
+=== Classifier model (full training set) ===
+
+RandomForest
+
+Bagging with 100 iterations and base learner
+
+weka.classifiers.trees.RandomTree -K 0 -M 1.0 -V 0.001 -S 1 -do-not-check-capabilities
+
+Time taken to build model: 263.18 seconds
+
+=== Evaluation on test split ===
+
+Time taken to test model on test split: 17.64 seconds
+
+=== Summary ===
+
+Correctly Classified Instances      210047               68.8248 %
+Incorrectly Classified Instances     95144               31.1752 %
+Kappa statistic                          0.6574
+Mean absolute error                      0.0308
+Root mean squared error                  0.1242
+Relative absolute error                 45.2243 %
+Root relative squared error             67.3633 %
+Total Number of Instances           305191     
+
+=== Detailed Accuracy By Class ===
+
+                 TP Rate  FP Rate  Precision  Recall   F-Measure  MCC      ROC Area  PRC Area  Class
+                 0.307    0.023    0.474      0.307    0.372      0.348    0.921     0.396     office_outgoing_expressvpn
+                 0.974    0.021    0.898      0.974    0.934      0.923    0.994     0.962     skype_outgoing_nordvpn
+                 0.516    0.002    0.922      0.516    0.662      0.680    0.971     0.748     office_outgoing_novpn
+                 0.491    0.010    0.788      0.491    0.605      0.601    0.955     0.623     bitcoin_full_outgoing_nordvpn
+                 0.228    0.010    0.490      0.228    0.311      0.316    0.940     0.429     monero_full_outgoing_expressvpn
+                 0.521    0.006    0.857      0.521    0.648      0.652    0.952     0.676     office_outgoing_nordvpn
+                 0.884    0.029    0.561      0.884    0.686      0.689    0.986     0.750     bitcoin_full_outgoing_novpn
+                 0.924    0.065    0.520      0.924    0.666      0.664    0.973     0.652     youtube_outgoing_nordvpn
+                 0.921    0.084    0.591      0.921    0.720      0.697    0.957     0.625     skype_outgoing_expressvpn
+                 0.492    0.013    0.615      0.492    0.547      0.533    0.964     0.452     monero_full_outgoing_nordvpn
+                 0.600    0.018    0.608      0.600    0.604      0.585    0.980     0.593     monero_full_outgoing_novpn
+                 0.343    0.002    0.759      0.343    0.472      0.504    0.976     0.581     bytecoin_full_outgoing_expressvpn
+                 0.885    0.000    0.985      0.885    0.932      0.933    0.997     0.929     youtube_outgoing_novpn
+                 0.870    0.029    0.793      0.870    0.830      0.808    0.981     0.901     skype_outgoing_novpn
+                 0.778    0.020    0.608      0.778    0.683      0.674    0.985     0.732     bitcoin_full_outgoing_expressvpn
+                 0.191    0.000    0.830      0.191    0.311      0.396    0.922     0.292     bytecoin_full_outgoing_nordvpn
+                 0.000    0.000    0.167      0.000    0.000      0.005    0.895     0.097     youtube_outgoing_expressvpn
+                 0.073    0.001    0.330      0.073    0.119      0.153    0.934     0.128     bytecoin_full_outgoing_novpn
+                 0.169    0.000    0.465      0.169    0.248      0.280    0.944     0.098     bitcoin_mining_outgoing_nordvpn
+                 0.348    0.001    0.278      0.348    0.309      0.310    0.985     0.160     monero_mining_outgoing_expressvpn
+                 0.154    0.000    0.460      0.154    0.231      0.265    0.952     0.119     monero_mining_outgoing_nordvpn
+                 0.113    0.000    0.310      0.113    0.166      0.187    0.989     0.134     bitcoin_mining_outgoing_expressvpn
+                 0.343    0.000    0.731      0.343    0.467      0.500    0.962     0.295     bytecoin_mining_outgoing_nordvpn
+                 0.308    0.000    0.628      0.308    0.414      0.440    0.985     0.229     monero_mining_outgoing_novpn
+                 0.000    0.000    ?          0.000    ?          ?        0.979     0.060     bitcoin_mining_outgoing_novpn
+                 0.359    0.000    0.599      0.359    0.449      0.463    0.986     0.263     bytecoin_mining_outgoing_expressvpn
+                 0.365    0.001    0.447      0.365    0.402      0.402    0.987     0.228     bytecoin_mining_outgoing_novpn
+Weighted Avg.    0.688    0.028    ?          0.688    ?          ?        0.967     0.678     
+
+=== Confusion Matrix ===
+
+     a     b     c     d     e     f     g     h     i     j     k     l     m     n     o     p     q     r     s     t     u     v     w     x     y     z    aa   <-- classified as
+  6009   952    53   217  2322    12    62     0  9445    40    36   111     1    58   130    25     2     8    17     0    22    17    17    17     0    17    12 |     a = office_outgoing_expressvpn
+    48 46718     0   408     2   344     0    48   138     1     2     0     0   115    32    17     0     0    42     0     0    30     1     0     0     0     0 |     b = skype_outgoing_nordvpn
+    67   285  7326    19    58    12   624    52   365     6  4981     6    53   246    12    15     1    51     1     6     2     0     1     0     0     2     0 |     c = office_outgoing_novpn
+   140   271     3 10701    23   985     3  6872  1030   336     3     1     0  1403     8     6     0     3     4     0     0     0     0     0     0     0     0 |     d = bitcoin_full_outgoing_nordvpn
+  4963   405    11    97  2761     7    21     0  3645    15    27    40     3    13    52     8     0     1    10     0     7    10    10     6     0     4     7 |     e = monero_full_outgoing_expressvpn
+   113   236    16   815    37 10385     7  1737   526  3180     7     8     1  2777    46    10     1     7     4     0     1     1     0     0     0     2     1 |     f = office_outgoing_nordvpn
+    37   313   153     1    19     1 10926     0   467     0    31     6     0   280     2     5     0    65     0    47     1     0     1     0     0     2     0 |     g = bitcoin_full_outgoing_novpn
+    15   149     1     4    24     5     0 19964    90     0     0     2     0  1356     1     0     0     0     0     0     0     0     0     0     0     0     0 |     h = youtube_outgoing_nordvpn
+   514    88    68   665   142     0   152     0 32868    81     2   387     0     2   399     1     0     0     2     0    63     2    75    64     0    61    45 |     i = skype_outgoing_expressvpn
+    34    56     5     2    29    20     1  5626   190  6136     0     0     0   351     4     6     0     4     0     0     0     8     0     0     0     0     6 |     j = monero_full_outgoing_nordvpn
+    99   246    26     5    51     1  4835     0   168     3  8354     0     1    14     8     9     0    75     0    27     0     3     0     0     0     1     0 |     k = monero_full_outgoing_novpn
+   161    27     2     6    58     0     6     2   333     1     2  1993     2    74  3039     1     0     4     0   104     0     1     0     0     0     0     0 |     l = bytecoin_full_outgoing_expressvpn
+     1     1    16     1     0     0   466     0    29     0     1     1  4514     0     0     0     0    70     0     0     0     0     0     0     0     0     0 |     m = youtube_outgoing_novpn
+     0   984   102   431     0   138    13  1032    44   155    41     0     9 30247  1566     0     0     0     0     0     0     0     0     0     0     0     0 |     n = skype_outgoing_novpn
+    68   547     0    27     8     0     1    78   753     0     0    15     0   825  9108     2     0     2     0     0     0     2     0     4     0     0   266 |     o = bitcoin_full_outgoing_expressvpn
+    88    26     8    11    41   202    35  1789   407     2     1     7     0    74     2   640     1    10     1     0     2     1     0     1     0     0     0 |     p = bytecoin_full_outgoing_nordvpn
+   232   475     9   129    46     1    42     0  4559    13     3    48     0    18    82    15     1     0     4     0     7     5    11     8     0     9     8 |     q = youtube_outgoing_expressvpn
+    68    29   140     6    10     3  1030     2   317     2   248     2     0    13     0    11     0   148     0     0     2     0     0     0     0     1     0 |     r = bytecoin_full_outgoing_novpn
+     0     1     0     2     0     1     0   290    14     1     0     0     0    52     0     0     0     0    74     0     0     0     3     0     0     0     0 |     s = bitcoin_mining_outgoing_nordvpn
+     8     1     0     0     0     1     0     0    56     0     0     0     0    22   139     0     0     0     0   121     0     0     0     0     0     0     0 |     t = monero_mining_outgoing_expressvpn
+     1     3     0     2     0     0     0   360    50     0     0     0     0    87     0     0     0     0     0     0    92     0     2     0     0     0     0 |     u = monero_mining_outgoing_nordvpn
+     2     0     4     0     0     0     0     0     5     0     0     0     0    19   153     0     0     0     0    99     0    36     0     0     0     0     0 |     v = bitcoin_mining_outgoing_expressvpn
+     0     1     0     1     0     1    27   522    17     0     0     0     0    60     0     0     0     0     0     0     1     0   329     0     0     0     0 |     w = bytecoin_mining_outgoing_nordvpn
+     0     0     0    22     0     0   357     0     0     0     0     0     0     0     0     0     0     0     0     0     0     0     0   169     0     0     0 |     x = monero_mining_outgoing_novpn
+     0   234     0     0     0     0   455     0     1     0     0     0     0     1     0     0     0     0     0     0     0     0     0     0     0     0     0 |     y = bitcoin_mining_outgoing_novpn
+     4     1     0     0     0     0     0     0    12     0     0     0     0    17   199     0     0     0     0    31     0     0     0     0     0   148     0 |     z = bytecoin_mining_outgoing_expressvpn
+     0     0     0     0     0     0   416     0    68     0     0     0     0     2     0     0     0     0     0     0     0     0     0     0     0     0   279 |    aa = bytecoin_mining_outgoing_novpn
+

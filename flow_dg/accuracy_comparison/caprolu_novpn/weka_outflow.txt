@@ -1,0 +1,62 @@
+=== Run information ===
+
+Scheme:       weka.classifiers.trees.RandomForest -P 100 -I 100 -num-slots 1 -K 0 -M 1.0 -V 0.001 -S 1
+Relation:     output-outflow
+Instances:    248824
+Attributes:   2
+              name
+              size
+Test mode:    split 66.0% train, remainder test
+
+=== Classifier model (full training set) ===
+
+RandomForest
+
+Bagging with 100 iterations and base learner
+
+weka.classifiers.trees.RandomTree -K 0 -M 1.0 -V 0.001 -S 1 -do-not-check-capabilities
+
+Time taken to build model: 35.27 seconds
+
+=== Evaluation on test split ===
+
+Time taken to test model on test split: 2.17 seconds
+
+=== Summary ===
+
+Correctly Classified Instances       68972               81.5272 %
+Incorrectly Classified Instances     15628               18.4728 %
+Kappa statistic                          0.7521
+Mean absolute error                      0.0502
+Root mean squared error                  0.1593
+Relative absolute error                 30.1273 %
+Root relative squared error             55.2017 %
+Total Number of Instances            84600     
+
+=== Detailed Accuracy By Class ===
+
+                 TP Rate  FP Rate  Precision  Recall   F-Measure  MCC      ROC Area  PRC Area  Class
+                 0.885    0.001    0.985      0.885    0.932      0.929    0.991     0.930     youtube_outgoing_novpn
+                 0.992    0.013    0.981      0.992    0.987      0.977    0.998     0.996     skype_outgoing_novpn
+                 0.565    0.009    0.927      0.565    0.703      0.686    0.953     0.788     office_outgoing_novpn
+                 0.636    0.075    0.624      0.636    0.630      0.557    0.929     0.625     monero_full_outgoing_novpn
+                 0.948    0.118    0.580      0.948    0.720      0.688    0.964     0.790     bitcoin_full_outgoing_novpn
+                 0.217    0.004    0.540      0.217    0.309      0.333    0.887     0.270     bytecoin_full_outgoing_novpn
+                 0.454    0.000    0.949      0.454    0.615      0.655    0.957     0.483     bytecoin_mining_outgoing_novpn
+                 0.339    0.001    0.808      0.339    0.478      0.521    0.948     0.308     bitcoin_mining_outgoing_novpn
+                 0.336    0.000    1.000      0.336    0.503      0.578    0.948     0.365     monero_mining_outgoing_novpn
+Weighted Avg.    0.815    0.037    0.843      0.815    0.811      0.789    0.970     0.834     
+
+=== Confusion Matrix ===
+
+     a     b     c     d     e     f     g     h     i   <-- classified as
+  4543     1    24     1   475    92     0     0     0 |     a = youtube_outgoing_novpn
+     6 34557   136    38    43     2     0    53     0 |     b = skype_outgoing_novpn
+    57   300  8039  4975   737   106     3     1     0 |     c = office_outgoing_novpn
+     3    17    64  8835  4886    90     1     0     0 |     d = monero_full_outgoing_novpn
+     2   330   200    36 11755    77     0     2     0 |     e = bitcoin_full_outgoing_novpn
+     1    15   205   265  1066   434    16     0     0 |     f = bytecoin_full_outgoing_novpn
+     0     3     0     0   444     2   374     0     0 |     g = bytecoin_mining_outgoing_novpn
+     0     0     0     0   460     0     0   236     0 |     h = bitcoin_mining_outgoing_novpn
+     0     1     0     0   392     0     0     0   199 |     i = monero_mining_outgoing_novpn
+
