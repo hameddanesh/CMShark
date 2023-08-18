@@ -51,7 +51,7 @@ class DataFlowTrainer:
 
 if __name__ == "__main__":
     dft = DataFlowTrainer()
-    dft.TestModel("netflow-dataset-in.csv")
-    dft.TestModel("netflow-dataset-out.csv")
-    # dft.FullModel("netflow-dataset-in.csv")
-    # dft.FullModel("netflow-dataset-out.csv")
+    # dft.TestModel("netflow-dataset-in.csv")
+    # dft.TestModel("netflow-dataset-out.csv")
+    dft.FullModel("netflow-dataset-in.csv")
+    dft.FullModel("netflow-dataset-out.csv")
