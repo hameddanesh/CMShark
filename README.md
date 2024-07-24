@@ -1,6 +1,8 @@
 # What is CMShark?
 CMShark is a NetfFlow based Crypto-mining Detector written in python + Qt-gui that combines three concurrent methods to achieve a fast, flexible, and efficient way of detecting crypto-jacking attacks.
 
+Article: https://content.iospress.com/articles/intelligent-decision-technologies/idt240319
+
 ## requirements
 following tool/libraries are required to run CMShark:
 
